@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/projects', [ProjectController::class, 'projects']);
 Route::get('/paginate', [ProjectController::class, 'paginate']);
+Route::get('/project/{id}', [ProjectController::class, 'project']);
