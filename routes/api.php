@@ -19,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/', [ProjectController::class, 'index']);
+Route::get('/projects', [ProjectController::class, 'projects']);
 Route::get('/paginate', [ProjectController::class, 'paginate']);
