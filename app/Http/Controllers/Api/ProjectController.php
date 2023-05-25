@@ -10,8 +10,8 @@ class ProjectController extends Controller
 {
     public function projects() {
         
-        $projects = Project::all();
-
+        // $projects = Project::all();
+        $projects = Project::with(['technologies', 'type'])->get();
         return response()->json([
             'succes' => true,
             'results' => $projects
@@ -20,7 +20,7 @@ class ProjectController extends Controller
 
     public function paginate() {
         
-        $projects = Project::paginate(6);
+        $projects = Project::with(['technologies', 'type'])->paginate(6);
 
         return response()->json([
             'succes' => true,
