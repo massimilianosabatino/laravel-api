@@ -17,4 +17,14 @@ class ProjectController extends Controller
             'results' => $projects
         ]);
     }
+
+    public function paginate() {
+        
+        $projects = Project::paginate(6);
+
+        return response()->json([
+            'succes' => true,
+            'results' => $projects
+        ]);
+    }
 }
