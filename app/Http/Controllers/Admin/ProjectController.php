@@ -94,10 +94,11 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
 
+        // Check if cover image is unset an it is upload, then remove old image
         if(!isset($request['cover-upload']) AND Str::startsWith($project->cover, 'uploads')){
             Storage::delete($project->cover);
         }
-
+        // Check if cover image is set, then check if the old image was an upload and if so remove it and add the new image. If old image was a url is replaced. 
         if(isset($request['cover-upload'])){
             if(Str::startsWith($project->cover, 'uploads')){
                 Storage::delete($project->cover);
@@ -123,6 +124,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        //Remove associate cover image
         if(Str::startsWith($project->cover, 'uploads')){
             Storage::delete($project->cover);
         }

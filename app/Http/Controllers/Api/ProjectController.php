@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+    // Get all projects
     public function projects() {
         
         // $projects = Project::all();
@@ -18,6 +19,7 @@ class ProjectController extends Controller
         ]);
     }
 
+    // Get all projects with pagination
     public function paginate() {
         
         $projects = Project::with(['technologies', 'type'])->paginate(6);
@@ -28,6 +30,7 @@ class ProjectController extends Controller
         ]);
     }
 
+    // Get project by id
     public function project($id) {
         
         $project = Project::with(['technologies', 'type'])->findOrFail($id);

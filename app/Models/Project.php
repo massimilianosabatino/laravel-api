@@ -11,6 +11,7 @@ class Project extends Model
 {
     use HasFactory;
 
+    //Slug is created from title on controller
     protected $guarded = ['slug'];
 
     public function type()
@@ -23,6 +24,7 @@ class Project extends Model
         return $this->belongsToMany(Technology::class)->withTimestamps();
     }
 
+    // Return correct path for images.
     protected function cover(): Attribute
     {
         return Attribute::make(

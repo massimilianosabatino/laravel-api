@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+{{-- Error handler --}}
 @if ($errors->any())
 <div class="alert alert-danger">
     <ul>
@@ -10,6 +11,7 @@
     </ul>
 </div>   
 @endif
+{{-- /Error handler --}}
 <div class="container-fluid mt-4">
     <div class="row justify-content-center">
         <div id="create" class="col-md-10 p-4 border rounded">
@@ -20,6 +22,7 @@
                     <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}">
                     <label for="title" class="form-label">Title</label>
                 </div>
+                {{-- Image section --}}
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="cover" name="cover" value="{{ old('cover') }}" >
                     <label for="cover" class="form-label">Cover image url or path</label>
@@ -31,10 +34,12 @@
                     <label for="cover-upload" class="form-label">Default file input example</label>
                     <input class="form-control" type="file" id="cover-upload" name="cover-upload">
                 </div>
+                {{-- /Image section --}}
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}">
                     <label for="description" class="form-label">Description</label>
                 </div>
+                {{-- Category --}}
                 <div class="form-floating mb-3">
                     <select class="form-select" name="type_id" id="category">
                         <option value="">Select category</option>
@@ -44,6 +49,8 @@
                       </select>
                       <label for="category">Select category</label>
                 </div>
+                {{-- /Category --}}
+                {{-- Technologies --}}
                 <div class=" mb-3">
                     <div>Select techonologies</div>
                     @foreach ($technologies as $technology)
@@ -53,6 +60,7 @@
                         </div>
                     @endforeach
                 </div>
+                {{-- /Technologies --}}
                 <div class="form-floating mb-3">
                     <input type="url" class="form-control" id="link" name="link" value="{{ old('link') }}">
                     <label for="link" class="form-label">Project external link</label>
@@ -65,6 +73,7 @@
                     <input class="form-check-input" type="checkbox" id="private" name="private" value="1" @checked(old('private'))>
                     <label for="private" class="form-check-label">Private project</label>
                 </div>
+                {{-- Action buttons --}}
                 <div class="row">
                     <button type="submit" class="btn btn-primary col-auto mx-2">Submit</button>
                     <button type="reset" class="btn btn-info col-auto mx-1">Reset</button>
@@ -72,6 +81,7 @@
                         <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Back to projects</a>
                     </div>
                 </div>
+                {{-- /Action buttons --}}
             </form>
         </div>
     </div>

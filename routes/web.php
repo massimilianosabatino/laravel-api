@@ -18,17 +18,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// Welcome page
 Route::get('/', function () {
     return view('welcome');
 });
 
+//Get project for guest user
 Route::resource('/projects', ProjectsController::class)->names('guest');
 
-// Route::get('/dashboard', function () {
-//     return view('admin.dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
+// Route for admin panel - only registered user
 Route::middleware('auth', 'verified')
     ->name('admin.')
     ->prefix('admin')

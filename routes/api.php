@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+// Route for project API
 Route::get('/projects', [ProjectController::class, 'projects']);
 Route::get('/paginate', [ProjectController::class, 'paginate']);
 Route::get('/project/{id}', [ProjectController::class, 'project']);

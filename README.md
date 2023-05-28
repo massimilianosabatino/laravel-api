@@ -54,6 +54,7 @@ Per inizializzare l'ambiente di sviluppo Vue:
 - Aggiungere possibilità di modifica gestione feed tramite interfaccia utente
 - Migliorare gestione errori feed
 - Cambiare modalità di visualizzazione contenuto della descrizione nel feed
+- Aggiungere paginazione
 
 ### Laravel 9 + Bootstrap Template + Auth
 Questo projetto è stato realizzato con una versione modificata del pacchetto `laravel/laravel`. Tale versione differisce nei seguenti punti:

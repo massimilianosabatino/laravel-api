@@ -20,10 +20,7 @@
                     <input type="text" class="form-control" id="technology" name="technology" value="{{ old('technology') }}">
                     <label for="technology" class="form-label">Technology</label>
                 </div>
-                {{-- <div class="mb-3">
-                    <input class="form-check-input" type="checkbox" id="private" name="private" value="1" @checked(old('private'))>
-                    <label for="private" class="form-check-label">Private project</label>
-                </div> --}}
+                {{-- Action buttons --}}
                 <div class="row">
                     <button type="submit" class="btn btn-primary col-auto mx-2">Submit</button>
                     <button type="reset" class="btn btn-info col-auto mx-1">Reset</button>
@@ -31,6 +28,7 @@
                         <a href="{{ route('admin.technologies.index') }}" class="btn btn-secondary">Back to technologies</a>
                     </div>
                 </div>
+                {{-- /Action buttons --}}
             </form>
         </div>
     </div>

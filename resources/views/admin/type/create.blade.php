@@ -20,6 +20,7 @@
                     <input type="text" class="form-control" id="category" name="category" value="{{ old('category') }}">
                     <label for="category" class="form-label">Category</label>
                 </div>
+                {{-- Action buttons --}}
                 <div class="row">
                     <button type="submit" class="btn btn-primary col-auto mx-2">Submit</button>
                     <button type="reset" class="btn btn-info col-auto mx-1">Reset</button>
@@ -27,6 +28,7 @@
                         <a href="{{ route('admin.types.index') }}" class="btn btn-secondary">Back to types</a>
                     </div>
                 </div>
+                {{-- /Action buttons --}}
             </form>
         </div>
     </div>

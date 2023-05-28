@@ -4,9 +4,9 @@
 <div class="container-fluid mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            {{-- Dashboard home card --}}
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
-
                 <div class="card-body">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -14,6 +14,7 @@
                     </div>
                     @endif
                     {{ __('You are logged in!') }}
+                    {{-- Feed reader --}}
                     <div class="news mt-3">
                         <h2>News feed</h2>
                         <div class="news-group">
@@ -27,10 +28,13 @@
                             @endforeach
                         </div>
                     </div>
+                    {{-- / Feed reader --}}
                 </div>
             </div>
+            {{-- / Dashboard home card --}}
         </div>
     </div>
+    {{-- Statistic card --}}
     <div class="row justify-content-center mt-4">
         <div class="col-md-8">
             <div class="card">
@@ -50,6 +54,8 @@
             </div>
         </div>
     </div>
+    {{-- / Statistic card --}}
+    {{-- Projects quick menu --}}
     <div class="row justify-content-center mt-4">
         <div class="col-md-8">
             <div class="card">
@@ -66,6 +72,8 @@
             </div>
         </div>
     </div>
+    {{-- / Projects quick menu --}}
+    {{-- Category and technologies quick menu --}}
     <div class="row justify-content-center mt-4">
         <div class="col-md-8">
             <div class="card">
@@ -91,5 +99,6 @@
             </div>
         </div>
     </div>
+    {{-- / Category and technologies quick menu --}}
 </div>
 @endsection

@@ -21,6 +21,7 @@
                     <input type="text" class="form-control" id="technology" name="technology" value="{{ old('technology', $technology->technology) }}">
                     <label for="technology" class="form-label">Technology</label>
                 </div>
+                {{-- Action buttons --}}
                 <div class="row">
                     <button type="submit" class="btn btn-primary col-auto mx-2">Submit</button>
                     <button type="reset" class="btn btn-info col-auto mx-1">Reset</button>
@@ -28,6 +29,7 @@
                         <a href="{{ route('admin.technologies.index') }}" class="btn btn-secondary">Back to technologies</a>
                     </div>
                 </div>
+                {{-- /Action buttons --}}
             </form>
         </div>
     </div>

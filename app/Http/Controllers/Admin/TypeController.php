@@ -94,6 +94,7 @@ class TypeController extends Controller
     {
         Schema::disableForeignKeyConstraints();
         $type->delete();
+        //Null on delete on migration didn't work, set null manually
         $type->projects->type_id = null;
         Schema::enableForeignKeyConstraints();
         return to_route('admin.types.index');
