@@ -23,7 +23,7 @@
                             <div class="news-element mb-3">
                                 <h4>{{ $item['name'] }} <small>{{ $item['pubDate'] }}</small></h4>
                                 <div class="news-description">{!! $item['description'] !!}</div>
-                                <div class="news-link"><a href="{{ $item['link'] }}">Read more</a></div>
+                                <div class="news-link"><a href="{{ $item['link'] }}" target="blank">Read more</a></div>
                             </div>    
                             @endforeach
                         </div>
