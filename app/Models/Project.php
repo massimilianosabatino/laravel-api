@@ -14,6 +14,12 @@ class Project extends Model
     //Slug is created from title on controller
     protected $guarded = ['slug'];
 
+    //Changes the behavior of the model. Use slug instead of id for search
+    public function getRouteKeyName()
+    {
+       return 'slug';
+    }
+
     public function type()
     {
         return $this->belongsTo(Type::class);

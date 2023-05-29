@@ -34,10 +34,10 @@
                             </td>
                             {{-- Action button --}}
                             <td>
-                                <a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-light">Details</a>
+                                <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-light">Details</a>
                             </td>
                             <td>
-                                <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-light">Edit</a>
+                                <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-light">Edit</a>
                             </td>
                             <td>
                                 {{-- Modal button for delete --}}
@@ -59,7 +59,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <form action="{{ route('admin.projects.destroy', $project->id) }}" method="post">
+                                                <form action="{{ route('admin.projects.destroy', $project) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Delete</button>

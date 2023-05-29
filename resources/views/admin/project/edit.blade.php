@@ -16,7 +16,7 @@
     <div class="row justify-content-center">
         <div id="edit" class="col-md-10 p-4 border rounded edit">
             <h2>Edit project</h2>
-            <form action="{{ route('admin.projects.update', $project->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.projects.update', $project) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-floating mb-3">
