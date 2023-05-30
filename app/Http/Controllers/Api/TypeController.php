@@ -12,6 +12,13 @@ class TypeController extends Controller
     {
         $types = Type::all();
 
+        if(!$types){
+            return response()->json([
+                'succes' => false,
+                'status' => 404
+            ],404);
+        }
+
         return response()->json([
             'succes' => true,
             'results' => $types
@@ -21,6 +28,13 @@ class TypeController extends Controller
     public function show(String $slug)
     {
         $type = Type::where('slug', $slug)->with('projects')->first();
+
+        if(!$type){
+            return response()->json([
+                'succes' => false,
+                'status' => 404
+            ],404);
+        }
 
         return response()->json([
             'succes' => true,

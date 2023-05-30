@@ -12,6 +12,12 @@ class TechonologyController extends Controller
     {
         $technologies = Technology::all();
 
+        if(!$technologies){
+            return response()->json([
+                'succes' => false,
+                'status' => 404
+            ], 404);
+        }
         return response()->json([
             'succes' => true,
             'results' => $technologies
@@ -22,6 +28,12 @@ class TechonologyController extends Controller
     {
         $technology = Technology::where('slug', $slug)->with('projects')->first();
 
+        if(!$technology){
+            return response()->json([
+                'succes' => false,
+                'status' => 404
+            ], 404);
+        }
         return response()->json([
             'succes' => true,
             'results' => $technology
