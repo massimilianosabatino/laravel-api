@@ -13,7 +13,7 @@ class LeadController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-
+        
         $newLead = new Lead();
         $newLead->fill($data);
         $newLead->save();

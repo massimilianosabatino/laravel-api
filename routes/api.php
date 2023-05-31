@@ -36,4 +36,4 @@ Route::get('/types', [TypeController::class, 'index']);
 Route::get('/type/{slug}', [TypeController::class, 'show']);
 
 //Route for Messages API
-Route::post('lead', [LeadController::class], 'store');
+Route::post('lead', [LeadController::class, 'store']);
