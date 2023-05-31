@@ -100,5 +100,24 @@
         </div>
     </div>
     {{-- / Category and technologies quick menu --}}
+    {{-- Leads quick menu --}}
+    <div class="row justify-content-center align-items-center mt-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Leads</div>
+                <div class="card-body d-flex">
+                    <div class="col col-lg-6 text-center d-flex">
+                        <div class="col col-lg-6">
+                            <a href="{{ route('admin.leads.index') }}" class="btn btn-light">Gestione leads</a>
+                        </div>
+                        <div class="col col-lg-6">
+                            <small class="align-middle">Messaggi ricevuti: {{ $leadsCount }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- //Leads quick menu --}}
 </div>
 @endsection
