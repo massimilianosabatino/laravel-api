@@ -3,3 +3,16 @@
         max-height: 3.75rem;
     }
 }
+
+.form-check-input:disabled{
+    opacity: 1 !important;
+}
+
+.form-check-input:checked{
+    background-color: #394f70 !important;
+    border-color: #394f70 !important;
+}
+
+.action-ico{
+    width: 1.5625rem;
+}

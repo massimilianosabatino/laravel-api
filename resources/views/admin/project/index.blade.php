@@ -30,19 +30,19 @@
                             <td>{{ $project->title }}</td>
                             <td>{{ $project->type?->category ?: 'Uncategorized' }}</td>
                             <td>
-                                <input class="form-check-input" type="checkbox" value="" {{ $project->private ? 'checked' : '' }} id="flexCheckDefault" aria-label="Private project">
+                                <input class="form-check-input" type="checkbox" value="" {{ $project->private ? 'checked' : '' }} id="flexCheckDefault" aria-label="Private project" disabled>
                             </td>
                             {{-- Action button --}}
                             <td>
                                 <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-light">Details</a>
                             </td>
                             <td>
-                                <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-light">Edit</a>
+                                <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-light"><img src="{{ asset('images/edit.png') }}" alt="Edit icon" class="action-ico"></a>
                             </td>
                             <td>
                                 {{-- Modal button for delete --}}
                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-{{ $project->id }}">
-                                    Delete
+                                    <img src="{{ asset('images/trash.png') }}" alt="Delete icon" class="action-ico">
                                 </button>
                                 {{-- /Modal button for delete --}}
                                 {{-- Modal delete content --}}
