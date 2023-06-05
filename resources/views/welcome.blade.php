@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Welcome to the Laravel Boostrap Auth Template') }}</div>
+                <div class="card-header">{{ __('Welcome to the Administration Page') }}</div>
 
                 <div class="card-body">
                     Click on login or register in the menu to get started :)
@@ -15,7 +15,7 @@
     </div>
     <div class="row justify-content-center mt-4">
         <div class="col-md-8">
-                        <a href="{{ route('guest.index') }}" class="btn btn-light">Vai ai progetti</a>
+                        <a href="{{ route('guest.index') }}" class="btn btn-light">Go to public projects</a>
         </div>
     </div>
 </div>
