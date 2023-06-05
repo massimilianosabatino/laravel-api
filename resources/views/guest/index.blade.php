@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <ul>
                 @foreach ($projects as $project)
-                    <a href="{{ route('guest.show', $project->id) }}"><li>{{ $project->title }}</li></a>
+                    <a href="{{ route('guest.show', $project->slug) }}"><li>{{ $project->title }}</li></a>
                 @endforeach
             </ul>
         </div>
